@@ -1,0 +1,52 @@
+cubes:
+  - name: factinternetsales
+    sql_table: cube_poc.cube_poc_schema.factinternetsales
+
+    joins: []
+
+    dimensions:
+      - name: salesordernumber
+        sql: salesordernumber
+        type: string
+        primary_key: true
+
+      - name: customerkey
+        sql: customerkey
+        type: number
+
+      - name: sales_reasons
+        sql: sales_reasons
+        type: string
+
+      - name: product_info
+        sql: product_info
+        type: string
+
+      - name: orderdate
+        sql: orderdate
+        type: string
+
+    measures:
+      - name: count
+        type: count
+
+      - name: salesorderlinenumber
+        sql: salesorderlinenumber
+        type: sum
+
+      - name: orderquantity
+        sql: orderquantity
+        type: sum
+
+      - name: unitprice
+        sql: unitprice
+        type: sum
+
+      - name: salesamount
+        sql: salesamount
+        type: sum
+
+    pre_aggregations:
+      # Pre-aggregation definitions go here.
+      # Learn more in the documentation: https://cube.dev/docs/caching/pre-aggregations/getting-started
+
