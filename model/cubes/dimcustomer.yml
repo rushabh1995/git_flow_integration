@@ -10,11 +10,11 @@ cubes:
         type: number
         primary_key: true
 
-      - name: firstname
+      - name: firstname_f
         sql: firstname
         type: string
 
-      - name: lastname
+      - name: lastname_f
         sql: lastname
         type: string
 
