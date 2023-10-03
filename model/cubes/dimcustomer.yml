@@ -36,7 +36,7 @@ cubes:
 
       - name: datefirstpurchase
         sql: datefirstpurchase
-        type: time
+        type: varchar
 
     measures:
       - name: count
